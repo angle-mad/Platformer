@@ -10,14 +10,18 @@ config_version=5
 
 [application]
 
-config/name="new-game-project"
+config/name="platformer-game"
 run/main_scene="uid://bbqlchkr3kyie"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[aseprite_importers]
+
+aseprite_executable_path="C:/Users/Caket/OneDrive/Desktop/bin/aseprite.exe"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/nklbdev.aseprite_importers/plugin.cfg")
 
 [input]
 

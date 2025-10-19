@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ytj564w0e2ce"]
+
+[node name="Collectable" type="Area2D"]
