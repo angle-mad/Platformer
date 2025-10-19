@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://bbqlchkr3kyie"]
+[gd_scene load_steps=10 format=4 uid="uid://bbqlchkr3kyie"]
 
 [ext_resource type="PackedScene" uid="uid://cnii03he7m13x" path="res://player.tscn" id="1_mhtsl"]
 [ext_resource type="Texture2D" uid="uid://fgl3svp7b175" path="res://assets/sprites/oak_woods_tileset.png" id="2_w51g1"]
 [ext_resource type="PackedScene" uid="uid://dte841mp2hcmq" path="res://kill_zone.tscn" id="3_03iqk"]
 [ext_resource type="PackedScene" uid="uid://b6s4rxo53huc5" path="res://collectable.tscn" id="3_4jv7b"]
+[ext_resource type="Texture2D" uid="uid://cmw68f4o3usrv" path="res://Plant_1.aseprite" id="5_ihreq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jv7b"]
 texture = ExtResource("2_w51g1")
@@ -387,20 +388,24 @@ tile_map_data = PackedByteArray("AAD6/wEAAQAAAAAAAAD7/wEAAQABAAAAAAD8/wEAAQABAAA
 tile_set = SubResource("TileSet_ihreq")
 
 [node name="Player" parent="." instance=ExtResource("1_mhtsl")]
-position = Vector2(2, -37)
+position = Vector2(5, 4)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-4, 2)
 zoom = Vector2(4, 4)
-limit_bottom = 200
-
-[node name="Foreground" type="TileMapLayer" parent="."]
+limit_bottom = 130
 
 [node name="Collectable" parent="." instance=ExtResource("3_4jv7b")]
-position = Vector2(255, -46)
+position = Vector2(254, -36)
 
 [node name="Kill_Zone" parent="." instance=ExtResource("3_03iqk")]
 position = Vector2(203, 151)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill_Zone"]
 shape = SubResource("WorldBoundaryShape2D_ihreq")
+
+[node name="Plant1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(254, -22)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("5_ihreq")
