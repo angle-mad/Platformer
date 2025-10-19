@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 aseprite_executable_path="C:/Users/Caket/OneDrive/Desktop/bin/aseprite.exe"
 
+[autoload]
+
+Music="*res://Scene/music.tscn"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/nklbdev.aseprite_importers/plugin.cfg")
