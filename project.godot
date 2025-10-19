@@ -45,4 +45,4 @@ ui_right={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.27822918, 0.46476704, 0.8793422, 1)
+environment/defaults/default_clear_color=Color(0, 0.044431336, 0.26744297, 1)
