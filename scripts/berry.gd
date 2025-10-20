@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 func _on_collectable_body_entered(_body):
 	counter += 1
 	if counter >= 1:
-		print(counter)
+		
 		# Give the player double jump ability
 		if _body.has_method("unlock_double_jump"):
 			_body.unlock_double_jump()
@@ -25,4 +25,4 @@ func _on_collectable_body_entered(_body):
 	visible = false
 	area_2d.visible = false
 	collision_shape.set_deferred("disabled", true)
-	respawn_timer = 3.0
+	respawn_timer = 2.0
