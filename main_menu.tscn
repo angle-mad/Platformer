@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://c82v86ijkc7jk"]
+
+[ext_resource type="Script" uid="uid://tqnwschai7nx" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://duxk5luimrg7a" path="res://assets/background/Moon Knight Font.otf" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://dmlt7pn8nvrfs" path="res://assets/background/background_layer_1.png" id="3_glbon"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
+texture = ExtResource("3_glbon")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
+bg_color = Color(0.6, 0.17254902, 0.2, 1)
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_fu7sn")
+
+[node name="Panel" type="Panel" parent="."]
+light_mask = 2
+z_index = -1
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1161.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nlkkf")
+
+[node name="Start" type="Button" parent="."]
+z_index = 5
+offset_left = 414.0
+offset_top = 275.0
+offset_right = 776.0
+offset_bottom = 391.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "Start"
+
+[node name="Title" type="Label" parent="."]
+offset_left = 90.0
+offset_top = 79.0
+offset_right = 1111.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jix8l")
+theme_override_font_sizes/font_size = 100
+text = "Knight Game"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
