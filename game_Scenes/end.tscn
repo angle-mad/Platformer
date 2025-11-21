@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://72srkdj16xoi"]
+
+[ext_resource type="FontFile" uid="uid://duxk5luimrg7a" path="res://game_Assets/fonts/Moon Knight Font.otf" id="1_q88an"]
+[ext_resource type="FontFile" uid="uid://bb3y6ho3mf00s" path="res://game_Assets/fonts/Starborn.otf" id="2_3ue1a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt2ag"]
+bg_color = Color(0.8572207, 0.384222, 0.82501674, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75yvt"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1158.0
+offset_bottom = 655.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lt2ag")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 125.0
+offset_top = 86.0
+offset_right = 1084.0
+offset_bottom = 289.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_q88an")
+theme_override_font_sizes/font_size = 100
+text = "First Level Passed"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+offset_left = 423.0
+offset_top = 365.0
+offset_right = 744.0
+offset_bottom = 468.0
+theme_override_fonts/font = ExtResource("2_3ue1a")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_75yvt")
+text = "Next Level"

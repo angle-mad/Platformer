@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://7apvt1u20vfo"]
+
+[ext_resource type="Script" uid="uid://dfxorcy8tvgcc" path="res://game_Scripts/keys.gd" id="1_7g4jd"]
+[ext_resource type="Texture2D" uid="uid://bw7hj8ddm7wcr" path="res://game_Assets/personal_Sprites/key_1.png" id="1_eqmi2"]
+[ext_resource type="Script" uid="uid://f5d4hvasku2n" path="res://game_Scripts/key_1.gd" id="3_ws23y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jm6nm"]
+radius = 14.035668
+
+[node name="Keys" type="Area2D"]
+script = ExtResource("1_7g4jd")
+
+[node name="Key1" type="Sprite2D" parent="."]
+position = Vector2(28, 48)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_eqmi2")
+script = ExtResource("3_ws23y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(27, 47)
+shape = SubResource("CircleShape2D_jm6nm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
